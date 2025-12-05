@@ -1,19 +1,72 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout title="صفحه اصلی">
+    <div class="container-portal">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title">پورتال اداری گنجاب ساز همدان</h1>
+            <p class="hero-subtitle">
+                به پورتال مدیریت اداری شرکت گنجاب ساز همدان خوش آمدید. از این سامانه برای ثبت تنخواه و مدیریت حضور و غیاب استفاده کنید.
+            </p>
+        </section>
+
+        <!-- Cards Section -->
+        <section class="pb-12">
+            <h2 class="section-title">خدمات اداری</h2>
+            <div class="grid-cards">
+                <!-- Payroll Card -->
+                <a href="/payroll" class="card-link">
+                    <article class="card">
+                        <div class="card-header card-header-payroll">
+                            <div class="icon-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">ثبت تنخواه</h3>
+                            <p class="card-description">
+                                فرم ثبت و ارسال درخواست تنخواه برای کارکنان
+                            </p>
+                            <span class="btn btn-full">ثبت درخواست جدید</span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Attendance Card -->
+                <a href="/attendance" class="card-link">
+                    <article class="card">
+                        <div class="card-header card-header-attendance">
+                            <div class="icon-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">حضور و غیاب</h3>
+                            <p class="card-description">
+                                نرم افزار ثبت حضور و غیاب پرسنل
+                            </p>
+                            <span class="btn btn-secondary btn-full">ورود به سیستم</span>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="pb-12">
+            <div class="bg-white rounded-xl shadow-md p-6 sm:p-8">
+                <h2 class="text-xl font-bold mb-4 text-text">درباره سامانه</h2>
+                <p class="text-text-muted leading-relaxed">
+                    این سامانه جهت تسهیل فرآیندهای اداری شرکت گنجاب ساز همدان طراحی شده است.
+                    کارکنان محترم می‌توانند از طریق این پورتال به خدمات مختلف اداری از جمله ثبت تنخواه و سیستم حضور و غیاب دسترسی داشته باشند.
+                </p>
+            </div>
+        </section>
+    </div>
 </Layout>
